@@ -7,7 +7,7 @@ const Greeting = () => {
   useEffect(() => {
     dispatch(GetGreeting());
   }, []);
-  const { greetings, state, loading } = useSelector((store) => store.greeting);
+  const { greetings, loading } = useSelector((store) => store.greeting);
 
   return <div>{loading ? "Loading" : <h1>{greetings.content}</h1>}</div>;
 };
